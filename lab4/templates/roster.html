@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+<html>
+    <head>
+        <title>view {{view}}</title>
+    </head>
+
+    <body>
+    <h2>The students in the view {{view}} are:</h2>
+    {% if view == 1 %}
+    <ul>
+        {% for student in roster1 %}
+        <li>{{ student.name }}:{{student.grade}}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    {% if view == 2 %}
+    <ul>
+        {% for student in roster1 %}
+        <li>{{ student.name }}:{{student.grade}}:{{student.stand}}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    </body>
+
+
+
+
+</html>
